@@ -43,6 +43,11 @@
     width: 2rem;
     height: 2rem;
     margin-left: 0.75rem;
+
+    @include tablet-and-desktop {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &__heading {
@@ -52,6 +57,14 @@
     margin: 0;
     font-weight: 900;
     animation: heading 2s ease-in-out;
+
+    @include tablet-and-desktop {
+      font-size: 4rem;
+    }
+
+    @include desktop {
+      font-size: 6rem;
+    }
   }
 
   &__subheading {
@@ -61,6 +74,15 @@
     animation: slide-in 2s ease-in;
     font-weight: 600;
     margin-bottom: 5rem;
+
+    @include tablet-and-desktop {
+      margin-bottom: 9rem;
+      font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
   }
 
   &__intro {
@@ -69,16 +91,34 @@
     text-transform: uppercase;
     animation: slide-in 2s ease-in;
     font-size: 0.75rem;
+
+    @include tablet-and-desktop {
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 
   &__logos {
-    @include flex(row, start, start);
+    width: 100%;
+    @include flex(row, space-between, start);
   }
 
   &__logo {
     width: 2.5rem;
     height: 2.5rem;
-    margin-right: 0.5rem;
     animation: fade-in 3s ease-in;    
+
+    @include tablet-and-desktop {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @include desktop {
+      width: 7rem;
+      height: 7rem;
+    }
   }
 }
